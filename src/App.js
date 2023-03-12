@@ -5,6 +5,7 @@ import {
 } from 'framer-motion';
 import './App.css';
 import { Close, Send, QuestionAnswer } from '@mui/icons-material';
+import { ReactComponent as BotLogo } from "./assets/bot_icon.svg"
 const BouncingDotsLoader = (props) => {
   return (
     <div style={{ width: "100%", margin: "5px 0" }}>
@@ -25,9 +26,12 @@ const UserMessage = ({ message }) => {
     </div>
   )
 }
+
 const BotMessage = ({ message }) => {
   return (
-    <div style={{ width: "100%", margin: "5px 0" }}>
+    <div style={{ width: "100%", margin: "5px 0",display: 'flex',
+    alignItems: 'flex-end'}}>
+      <BotLogo className="hover-widget-bot-logo"/>
       <span className="hover-widget-bot-message">{message}</span>
     </div>
   )

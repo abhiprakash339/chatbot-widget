@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color:#FFF;
+  color: #FFF;
 
 }
 
@@ -32,7 +32,7 @@
   right: 0px;
   margin: 30px;
   padding: 2px;
-  width: 300px;
+  width: 330px;
   border: 2px solid #a8c0ff;
   border-radius: 5px;
   overflow: hidden;
@@ -45,12 +45,18 @@
   background: var(--hover-widget-primary-color);
   border-bottom: 2px solid #FFF;
   border-radius: 5px 5px 0 0;
-  color: #FFF;
   padding: 5px 2px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+}
+.hover-widget-box-header span {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 15px;
+  color: #FFF;
 }
 
 .hover-widget-box-header button {
@@ -68,9 +74,11 @@
   overflow-y: scroll;
   background: #FFF;
 }
+
 .hover-widget-box-message> :first-child {
   margin-top: auto !important;
 }
+
 .hover-widget-box-message::-webkit-scrollbar {
   width: 5px;
 }
@@ -124,10 +132,18 @@
   background: var(--hover-widget-primary-color);
   padding: 10px;
   border-radius: 5px;
-  max-width: 70%;
+  max-width: 60%;
   float: right;
   word-wrap: break-word;
   margin-right: 10px;
+}
+
+.hover-widget-bot-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid black;
 }
 
 .hover-widget-bot-message {
@@ -137,11 +153,12 @@
   background: #FFF;
   padding: 10px;
   border-radius: 5px;
-  max-width: 70%;
+  max-width: 55%;
   float: left;
   word-wrap: break-word;
   margin-left: 10px;
 }
+
 .hover-widget-bouncing-loader>div {
   width: 10px;
   height: 10px;
