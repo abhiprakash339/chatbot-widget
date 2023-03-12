@@ -4,7 +4,7 @@ import {
   motion,
 } from 'framer-motion';
 import './App.css';
-import { Close, Send,QuestionAnswer } from '@mui/icons-material';
+import { Close, Send, QuestionAnswer } from '@mui/icons-material';
 const BouncingDotsLoader = (props) => {
   return (
     <div style={{ width: "100%", margin: "5px 0" }}>
@@ -46,9 +46,12 @@ const HoverBox = (props) => {
   const inputRef = React.useRef()
   const messageRef = React.useRef()
 
-  React.useEffect(()=>{
-    messageRef.current.scrollIntoView({ behavior: 'smooth' })
-  },[chatData,loader])
+  React.useEffect(() => {
+    setTimeout(() => {
+      messageRef.current.scrollIntoView({ behavior: 'smooth' })
+    }, 100);
+
+  }, [chatData, loader])
 
   const getBotResponse = () => {
     const userMessag = inputRef.current.value
@@ -58,7 +61,7 @@ const HoverBox = (props) => {
     setTimeout(() => {
       setLoader(false)
       setChatData((data) => [...data, { type: 'bot', message: userMessag }])
-      
+
     }, 5000);
 
   }
@@ -80,7 +83,7 @@ const HoverBox = (props) => {
         <div ref={messageRef} />
       </div>
       <div className="hover-widget-box-input">
-        <textarea ref={inputRef} value={message} onChange={(e) => setMessage(e.target.value)} wrap="soft"></textarea>
+        <textarea placeholder="send messages..." ref={inputRef} value={message} onChange={(e) => setMessage(e.target.value)} wrap="hard"></textarea>
         <button onClick={() => getBotResponse()} disabled={loader}><Send /></button>
       </div>
     </div>
