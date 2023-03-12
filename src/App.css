@@ -144,10 +144,10 @@
   border-radius: 50%;
   padding: 5px;
   border: 1px solid black;
+  
 }
 
 .hover-widget-bot-message {
-  /* border: 1px solid #424242; */
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   color: #000;
   background: #FFF;
@@ -158,10 +158,12 @@
   word-wrap: break-word;
   margin-left: 10px;
 }
-
+.hover-widget-bouncing-loader{
+  box-shadow: none !important;
+}
 .hover-widget-bouncing-loader>div {
-  width: 10px;
-  height: 10px;
+  width: 13px;
+  height: 13px;
   margin: 0 2px;
   border-radius: 50%;
   background-color: #000000;
