@@ -34,7 +34,6 @@
   padding: 2px;
   width: 20vw;
   min-width: 330px;
-  height: 70vh;
   border: 2px solid #a8c0ff;
   border-radius: 5px;
   overflow: hidden;
@@ -71,7 +70,8 @@
 }
 
 .hover-widget-box-message {
-  height: 450px;
+  height: 60vh;
+  max-height: 550px;
   border-bottom: none;
   display: flex;
   flex-direction: column;
