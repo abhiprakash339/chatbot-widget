@@ -57,7 +57,7 @@ function HoverWidget(props) {
     </div>
   )
 }
-const HoverBox = ({ data, setData, onClick }) => {
+const HoverBox = ({ data, setData, onClick,product }) => {
 
   const [message, setMessage] = React.useState('')
   const [loader, setLoader] = React.useState(false)
@@ -75,7 +75,7 @@ const HoverBox = ({ data, setData, onClick }) => {
     setMessage(() => "")
     setData((prev) => [...prev, { type: 'user', message: userMessag }])
     setLoader(true)
-    const msg = await getChatResponse(userMessag)
+    const msg = await getChatResponse(userMessag,product)
     setLoader(false)
     setData((prev) => [...prev, { type: 'bot', message: msg }])
 
@@ -108,7 +108,7 @@ const HoverBox = ({ data, setData, onClick }) => {
   )
 }
 
-function App() {
+function App({product}) {
   const [showMessage, setShowMessage] = React.useState(false);
   const [chatData, setChatData] = React.useState([])
 
@@ -132,7 +132,7 @@ function App() {
               opacity: 1
             }}
           >
-            <HoverBox data={chatData} setData={setChatData} onClick={setShowMessage} />
+            <HoverBox data={chatData} setData={setChatData} onClick={setShowMessage} product={product}/>
           </motion.div>
 
       }

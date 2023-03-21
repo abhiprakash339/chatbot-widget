@@ -1,13 +1,13 @@
 import axios from "axios";
 
-export const getChatResponse = async(message) => {
+export const getChatResponse = async(message,product) => {
     try{
-        const resp = await axios.get(`https://demo.evmlabs.com/bot/api/chat?message=${message}`)
+        const resp = await axios.get(`https://demo.evmlabs.com/bot/api/chat?message=${message}&product=${product}`)
         if(resp.status === 200){
             return resp.data.data
         }
-        return "failed to query data from server"
+        return "server not reachable"
     }catch(err){
-        return "failed to query data from server"
+        return "server not reachable"
     }
 }
