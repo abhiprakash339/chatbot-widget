@@ -56,7 +56,7 @@ const LivebenchChatbotBox = ({ data, setData, onClick, product }) => {
                 <div ref={messageRef} />
             </div>
             <div className="livebench-chatbot-widget-box-input">
-                <textarea onKeyUp={(e) => handler(e)} placeholder="send messages..." ref={inputRef} value={message} onChange={(e) => setMessage(e.target.value)} wrap="hard"></textarea>
+                <textarea onKeyUp={(e) => handler(e)} placeholder="ask anything..." ref={inputRef} value={message} onChange={(e) => setMessage(e.target.value)} wrap="hard"></textarea>
                 <button onClick={() => getBotResponse()} disabled={loader}><Send /></button>
             </div>
         </div>
