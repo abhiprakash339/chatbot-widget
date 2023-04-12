@@ -10,7 +10,7 @@ const domElement = document.createElement('div');
 domElement.id = 'livebench-chatbot-widget'
 document.body.appendChild(domElement)
 const root = ReactDOM.createRoot(domElement);
-
+console.log([document.title])
 switch(document.title){
   case 'High Voltage Synchronous Buck-Boost Controller-v4':
     root.render(
