@@ -29,6 +29,7 @@ const LivebenchChatbotBox = ({ data, setData, onClick, product }) => {
       for await (let i of msg) {
         animateMessageRef.current.innerHTML += i; 
         await new Promise(r => setTimeout(r, 30));
+        messageRef.current.scrollIntoView({ behavior: 'smooth' })
       }
       setLoader(false)
       setData((prev) => [...prev, { type: 'bot', message: msg }])
