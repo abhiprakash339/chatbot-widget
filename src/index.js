@@ -10,26 +10,23 @@ const domElement = document.createElement('div');
 domElement.id = 'livebench-chatbot-widget'
 document.body.appendChild(domElement)
 const root = ReactDOM.createRoot(domElement);
-document.addEventListener("DOMContentLoaded", () => {
-  console.log([document.title])
-});
 
-switch(document.title){
-  case 'High Voltage Synchronous Buck-Boost Controller-v4':
+switch(window.location.pathname){
+  case '/user/form62c40186c555b0147642db0c':
     root.render(
       <React.StrictMode>
         <App product="ISL81801" />
       </React.StrictMode>
     );
     break;
-  case 'Ultra-low jitter differential XO for Standard Networking Frequencies':
+  case '/user/form630f7aa3c555b01159e206d9':
     root.render(
       <React.StrictMode>
         <App product="SiT9501" />
       </React.StrictMode>
     );
     break;
-  case 'IMOTION 2.0 -Motor Control IC':
+  case '/user/form64115dd4c555b00363a7e1f3':
     root.render(
       <React.StrictMode>
         <App product="IMC101T" />
