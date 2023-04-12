@@ -34,6 +34,6 @@ switch(window.location.pathname){
     );
     break;
   default:
-    console.error("chatbot disabled for this form")
+    console.error(`chatbot disabled for ${window.location.pathname} form`)
     break;
 }
