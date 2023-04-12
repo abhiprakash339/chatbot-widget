@@ -1,4 +1,4 @@
-.hover-widget-logo-container {
+.livebench-chatbot-widget-logo-container {
   position: fixed;
   z-index: 1900000000;
   bottom: 0px;
@@ -7,7 +7,7 @@
   height: 60px;
   margin: 30px;
   padding: 10px;
-  background: var(--hover-widget-primary-color);
+  background: var(--livebench-chatbot-widget-primary-color);
   border-radius: 26px;
   box-shadow: 0px 0px 18px 3px rgb(0 0 0 / 35%);
   cursor: pointer;
@@ -20,20 +20,20 @@
 
 }
 
-.hover-widget-logo {
+.livebench-chatbot-widget-logo {
   width: 100%;
   height: 100%;
 }
 
-.hover-widget-box-container {
+.livebench-chatbot-widget-box-container {
   position: fixed;
   z-index: 1900000000;
   bottom: 0px;
   right: 0px;
   margin: 30px;
   padding: 2px;
-  width: 20vw;
-  min-width: 330px;
+  min-width: 550px;
+  max-width: 550px;
   border: 2px solid #a8c0ff;
   border-radius: 5px;
   overflow: hidden;
@@ -44,8 +44,8 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.hover-widget-box-header {
-  background: var(--hover-widget-primary-color);
+.livebench-chatbot-widget-box-header {
+  background: var(--livebench-chatbot-widget-primary-color);
   border-bottom: 2px solid #FFF;
   border-radius: 5px 5px 0 0;
   padding: 5px 2px;
@@ -55,22 +55,23 @@
   align-items: center;
 
 }
-.hover-widget-box-header span {
+
+.livebench-chatbot-widget-box-header span {
   font-size: 20px;
   font-weight: 600;
   padding: 5px 15px;
   color: #FFF;
 }
 
-.hover-widget-box-header button {
+.livebench-chatbot-widget-box-header button {
   background: transparent;
   border: none;
   cursor: pointer;
   color: #FFF;
 }
 
-.hover-widget-box-message {
-  height: 60vh;
+.livebench-chatbot-widget-box-message {
+  height: 65vh;
   max-height: 550px;
   border-bottom: none;
   display: flex;
@@ -80,37 +81,37 @@
   font-size: 14px;
 }
 
-.hover-widget-box-message> :first-child {
+.livebench-chatbot-widget-box-message> :first-child {
   margin-top: auto !important;
 }
 
-.hover-widget-box-message::-webkit-scrollbar {
+.livebench-chatbot-widget-box-message::-webkit-scrollbar {
   width: 5px;
 }
 
-.hover-widget-box-message::-webkit-scrollbar-track {
+.livebench-chatbot-widget-box-message::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(17, 17, 17, 0);
   border-radius: 10px;
 }
 
-.hover-widget-box-message::-webkit-scrollbar-thumb {
+.livebench-chatbot-widget-box-message::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 
-.hover-widget-box-input {
+.livebench-chatbot-widget-box-input {
   border: none;
   display: flex;
   height: 40px;
-  -webkit-box-shadow: 0px 0px 6px var(--hover-widget-primary-color);
-  -moz-box-shadow: 0px 0px 6px var(--hover-widget-primary-color);
-  box-shadow: 0px 0px 6px var(--hover-widget-primary-color);
-  /* border-top: 2px solid var(--hover-widget-primary-color); */
+  -webkit-box-shadow: 0px 0px 6px var(--livebench-chatbot-widget-primary-color);
+  -moz-box-shadow: 0px 0px 6px var(--livebench-chatbot-widget-primary-color);
+  box-shadow: 0px 0px 6px var(--livebench-chatbot-widget-primary-color);
+  /* border-top: 2px solid var(--livebench-chatbot-widget-primary-color); */
 
 }
 
-.hover-widget-box-input textarea {
+.livebench-chatbot-widget-box-input textarea {
   width: 100%;
   height: 100%;
   padding: 0 10px;
@@ -122,21 +123,21 @@
   color: #000;
 }
 
-.hover-widget-box-input textarea:focus {
+.livebench-chatbot-widget-box-input textarea:focus {
   outline: none;
 }
 
-.hover-widget-box-input button {
+.livebench-chatbot-widget-box-input button {
   border: none;
   height: 100%;
-  background: var(--hover-widget-primary-color);
+  background: var(--livebench-chatbot-widget-primary-color);
   color: #FFF;
   cursor: pointer;
 }
 
-.hover-widget-user-message {
-  color: var(--hover-widget-secondary-color);
-  background: var(--hover-widget-primary-color);
+.livebench-chatbot-widget-user-message {
+  color: var(--livebench-chatbot-widget-secondary-color);
+  background: var(--livebench-chatbot-widget-primary-color);
   padding: 10px;
   border-radius: 10px 10px 0px 10px;
   max-width: 70%;
@@ -145,51 +146,54 @@
   margin-right: 10px;
 }
 
-.hover-widget-bot-logo {
+.livebench-chatbot-widget-bot-logo {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   padding: 5px;
   border: 1px solid black;
-  
+
 }
 
-.hover-widget-bot-message {
+.livebench-chatbot-widget-bot-message {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   color: #000;
   background: #FFF;
   padding: 10px;
-  border-radius: 10px 10px 10px 0px;;
+  border-radius: 10px 10px 10px 0px;
   max-width: 70%;
   min-width: 30%;
   float: left;
   word-wrap: break-word;
   margin-left: 10px;
 }
-.hover-widget-bouncing-loader{
+
+.livebench-chatbot-widget-bouncing-loader {
   box-shadow: none !important;
+  /* min-height: 20px; */
 }
-.hover-widget-bouncing-loader>div {
+
+.livebench-chatbot-widget-bouncing-loader>div {
   width: 13px;
   height: 13px;
   margin: 0 2px;
   border-radius: 50%;
   background-color: #000000;
   opacity: 1;
-  animation: hover-widget-bouncing-loader 0.6s infinite alternate;
+  animation: livebench-chatbot-widget-bouncing-loader 0.6s infinite alternate;
 }
 
-@keyframes hover-widget-bouncing-loader {
+@keyframes livebench-chatbot-widget-bouncing-loader {
   to {
     opacity: 0.1;
     transform: translateY(-8px);
   }
 }
 
-.hover-widget-bouncing-loader>div:nth-child(2) {
+.livebench-chatbot-widget-bouncing-loader>div:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-.hover-widget-bouncing-loader>div:nth-child(3) {
+.livebench-chatbot-widget-bouncing-loader>div:nth-child(3) {
   animation-delay: 0.4s;
 }
