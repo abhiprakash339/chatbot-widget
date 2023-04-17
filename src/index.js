@@ -26,7 +26,7 @@ switch(window.location.pathname){
       </React.StrictMode>
     );
     break;
-  case '/user/form64115dd4c555b00363a7e1f3':
+  case '/user/form64392c30c555b07a50ac3372':
     root.render(
       <React.StrictMode>
         <App product="IMC101T" />
