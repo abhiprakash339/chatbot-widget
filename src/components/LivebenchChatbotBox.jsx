@@ -26,9 +26,9 @@ const LivebenchChatbotBox = ({ data, setData, onClick, product }) => {
       setLoader(true)
       const msg = await getChatResponse(userMessag, product)
       animateMessageRef.current.innerHTML = ''
-      for await (let i of msg) {
-        animateMessageRef.current.innerHTML += i; 
-        await new Promise(r => setTimeout(r, 30));
+      for await (let i of msg.split(" ")) {
+        animateMessageRef.current.innerHTML += i + " "; 
+        await new Promise(r => setTimeout(r, 100));
         messageRef.current.scrollIntoView({ behavior: 'smooth' })
       }
       setLoader(false)
