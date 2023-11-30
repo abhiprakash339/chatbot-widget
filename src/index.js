@@ -19,27 +19,6 @@ switch(window.location.pathname){
       </React.StrictMode>
     );
     break;
-  case '/user/form630f7aa3c555b01159e206d9':
-    root.render(
-      <React.StrictMode>
-        <App product="SiT9501" />
-      </React.StrictMode>
-    );
-    break;
-  case '/user/form64392c30c555b07a50ac3372':
-    root.render(
-      <React.StrictMode>
-        <App product="IMC101T" />
-      </React.StrictMode>
-    );
-    break;
-  case '/user/form6363df0dc555b0177509aee1':
-    root.render(
-      <React.StrictMode>
-        <App product="ADI" />
-      </React.StrictMode>
-    );
-    break;
   default:
     console.error(`chatbot disabled for ${window.location.pathname} form`)
     break;
