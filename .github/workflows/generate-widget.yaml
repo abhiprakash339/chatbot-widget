@@ -2,7 +2,7 @@ name: Build and deploy widget
 
 on:
   push:
-    branches: [main]
+    branches: [dev]
 
 jobs:
   build-and-deploy:
@@ -29,6 +29,12 @@ jobs:
           git config --global user.email '1289prakash@gmail.com'
           git add ./docs
           git commit -m "Updated docs"
+
+      - name: merge dev to main
+        run: |
+          git checkout main
+          git merge dev --no-ff
+          git push origin main
 
       - name: Push changes
         uses: ad-m/github-push-action@master
