@@ -1,0 +1,36 @@
+name: Build and deploy widget
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies 
+        run: npm install
+
+      - name: Build widget
+        run: npm run build:widget
+
+      - name: Remove old docs
+        run: rm -r docs
+
+      - name: Copy dist to docs
+        run: mv ./dist/ docs
+
+      - name: Add docs to git
+        run: |
+          git config --global user.name 'Abhishek'
+          git config --global user.email '1289prakash@gmail.com'
+          git add ./docs
+          git commit -m "Updated docs"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
