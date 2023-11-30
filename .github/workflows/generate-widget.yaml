@@ -32,7 +32,7 @@ jobs:
 
       - name: merge dev to main
         run: |
-          git checkout main
+          git checkout -b main remotes/origin/main
           git merge dev --no-ff
           git push origin main
 
