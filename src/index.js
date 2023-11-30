@@ -12,7 +12,7 @@ document.body.appendChild(domElement)
 const root = ReactDOM.createRoot(domElement);
 
 switch(window.location.pathname){
-  case '/user/form62c40186c555b0147642db0c':
+  case '/app/ISL81801-V4-BETA':
     root.render(
       <React.StrictMode>
         <App product="ISL81801" />
